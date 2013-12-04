@@ -1,0 +1,40 @@
+using System;
+ 
+ class Persona
+ {
+    public string Nombre; 
+    
+    public int Edad;        
+ 
+    void Cumpleaños()   
+    {
+       Edad++;
+    }
+                                    
+    public Persona (string nombre, int edad) 
+    {
+       Nombre = nombre;
+       Edad = edad;
+    }
+ }
+ 
+ class Trabajador: Persona
+ {
+  
+    public int Sueldo;
+ 
+ Trabajador(string nombre, int edad, int sueldo)
+     : base(nombre, edad)
+    {  
+       Sueldo = sueldo; 
+    }
+    
+    public static void Main()
+    {
+       Trabajador p = new Trabajador("Eduardo", 18, 10000);    
+       Console.WriteLine ("Nombre:  "+p.Nombre);
+       Console.WriteLine ("Edad:    "+p.Edad);
+       Console.WriteLine ("Sueldo:  "+p.Sueldo);
+      Console.ReadKey();
+    }
+ }
